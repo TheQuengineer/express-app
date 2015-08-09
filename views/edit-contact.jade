@@ -1,3 +1,4 @@
+
 extends layout
 
 block content
@@ -6,29 +7,29 @@ block content
 
   div
     .col-lg-offset-1.col-lg-8
-      form.form-horizontal(novalidate role="form" name="form")
+      form.form-horizontal(novalidate role="form" name="form" method="post" action="/edit-contact/")
         .form-group
-          label.col-sm-2.control-label(for="firstName") First Name
+          label.col-sm-2.control-label(for="first") First Name
           .col-sm-10
-            input.form-control(id="firstName" type="text" placeholder="First Name"  value="#{contact.name.first}" required)
+            input.form-control(id="first" name="first"  type="text" placeholder="First Name"  value="#{contact.name.first}" required)
 
         .form-group
-          label.col-sm-2.control-label(for="lastName") Last Name
+          label.col-sm-2.control-label(for="last") Last Name
           .col-sm-10
-            input.form-control(id="lastName" type="text" placeholder="Last Name" value="#{contact.name.last}" required)
+            input.form-control(id="last" name="last" type="text" placeholder="Last Name" value="#{contact.name.last}" required)
 
         .form-group
           label.col-sm-2.control-label(for="email") Email
           .col-sm-10
-            input.form-control(id="email" type="email" name="eMail" placeholder="Email" value="#{contact.email}" required)
+            input.form-control(id="email" type="email" name="email" placeholder="Email" value="#{contact.email}" required)
 
         .form-group
           label.col-sm-2.control-label(for="city") City
           .col-sm-6
-            input.form-control(id="city" type="text" placeholder="City" value="#{contact.location.city}")
+            input.form-control(id="city" name="city" type="text" placeholder="City" value="#{contact.location.city}")
           label.col-sm-1.control-label(for="state") State
           .col-sm-3
-            input.form-control(id="state" type="text" placeholder="State" value="#{contact.location.state}")
+            input.form-control(id="state" name="state" type="text" placeholder="State" value="#{contact.location.state}")
 
         .form-group
           .col-sm-offset-2.col-sm-2

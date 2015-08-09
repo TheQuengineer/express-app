@@ -30,4 +30,10 @@ router.get('/edit-contact/:id', function(req, res, next){
   })
 });
 
+router.post('/edit-contact/', function(req, res, next){
+    console.log("Edit Contact Post");
+  res.redirect('/contacts/');
+
+});
+
 module.exports = router;
