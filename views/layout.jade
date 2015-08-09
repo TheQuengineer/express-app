@@ -1,7 +1,31 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    head
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        title= title
+        link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+        link(rel='stylesheet', href='/bootstrap/css/bootstrap-theme.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        .navbar.navbar-inverse.navbar-fixed-top
+            .container
+                .navbar-header
+                    button.navbar-toggle(type="button",data-toggle="collapse",data-target="#bs-example-navbar-collapse-1")
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href="/") MEAN Corp
+                .collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
+                    ul.nav.navbar-nav
+                        li
+                            a(href="/about/") About
+                        li
+                            a(href="/contacts/") Contacts
+                        li
+                            a(href="/add-contact/") Add Contact
+        .container
+        block content
+
+        script(src='/javascripts/jquery-2.1.3.min.js')
+        script(src='/bootstrap/js/bootstrap.min.js')
