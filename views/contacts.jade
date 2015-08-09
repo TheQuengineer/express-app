@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+
+  div
+    .row
+      .col-lg-3
+        ul.list-group
+          each contact in contacts
+            li.list-group-item
+              button.btn.btn-danger(type="button")
+                span.glyphicon.glyphicon-minus
+              a(href="/edit-contact/#{contact.id}")
+                span= " " + contact.name.first + " " + contact.name.last
